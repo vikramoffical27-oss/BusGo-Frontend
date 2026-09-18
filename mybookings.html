@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - My Bookings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        🚌 BusGo
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="searchbus.html">
+                Search
+            </a>
+        </li>
+
+        <li>
+            <a href="buses.html">
+                Buses
+            </a>
+        </li>
+
+        <li>
+            <a href="mybookings.html"
+               class="active">
+                My Bookings
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="bookings-container">
+
+
+    <h1 class="page-title">
+        🎫 My Bookings
+    </h1>
+
+
+    <p class="page-subtitle">
+        Your upcoming and previous bus journeys
+    </p>
+
+
+    <!-- BOOKINGS -->
+
+    <div id="result"
+         class="bookings-list">
+
+        <div class="loading">
+            Loading your bookings...
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        loadBookings();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

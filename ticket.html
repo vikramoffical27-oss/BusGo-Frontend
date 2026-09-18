@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>BusGo - Ticket</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🚌 BusGo
+    </div>
+
+    <div class="nav-links">
+
+        <a href="searchbus.html">
+            Search
+        </a>
+
+        <a href="mybookings.html">
+            My Bookings
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="ticket-page">
+
+    <div class="ticket">
+
+        <div class="ticket-top">
+
+            <div>
+                <h1>🚌 BusGo</h1>
+                <p>Digital Bus Ticket</p>
+            </div>
+
+            <div class="confirmed">
+                ✓ CONFIRMED
+            </div>
+
+        </div>
+
+
+        <div class="ticket-route">
+
+            <div class="city">
+
+                <span class="label">
+                    FROM
+                </span>
+
+                <h2 id="ticketSource">
+                    --
+                </h2>
+
+            </div>
+
+
+            <div class="route-line">
+
+                🚌
+
+                <span>────────</span>
+
+                →
+
+            </div>
+
+
+            <div class="city">
+
+                <span class="label">
+                    TO
+                </span>
+
+                <h2 id="ticketDestination">
+                    --
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="ticket-details">
+
+
+            <div class="detail">
+
+                <span>
+                    🚌 Bus
+                </span>
+
+                <strong id="ticketBusName">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    🔢 Bus Number
+                </span>
+
+                <strong id="ticketBusNumber">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    🛫 Departure Date
+                </span>
+
+                <strong id="ticketDepartureDate">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    🕐 Departure Time
+                </span>
+
+                <strong id="ticketDepartureTime">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    🛬 Arrival Date
+                </span>
+
+                <strong id="ticketArrivalDate">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    🕐 Arrival Time
+                </span>
+
+                <strong id="ticketArrivalTime">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    💺 Seat Number
+                </span>
+
+                <strong id="ticketSeat">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    👤 Passenger
+                </span>
+
+                <strong id="ticketPassenger">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    💰 Fare
+                </span>
+
+                <strong id="ticketFare">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    📧 Email
+                </span>
+
+                <strong id="ticketEmail">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="ticket-bottom">
+
+            <p>
+                🎫 Booking confirmed successfully
+            </p>
+
+            <div class="ticket-buttons">
+
+                <button onclick="window.location.href='mybookings.html'">
+                    🎟️ My Bookings
+                </button>
+
+                <button onclick="window.location.href='searchbus.html'">
+                    🚌 Book Another Ticket
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadTicket();
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Book Ticket</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🚌 BusGo
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="searchbus.html">Search</a>
+            </li>
+
+            <li>
+                <a href="buses.html">Buses</a>
+            </li>
+
+            <li>
+                <a href="mybookings.html">My Bookings</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN BOOKING CONTAINER
+    ========================== -->
+
+    <main class="booking-container">
+
+        <h1 class="booking-title">
+            🎟️ Book Your Ticket
+        </h1>
+
+
+        <!-- =========================
+             SELECTED BUS DETAILS
+        ========================== -->
+
+        <section class="bus-section">
+
+            <h2>🚌 Selected Bus</h2>
+
+            <div id="busDetails">
+
+                <div class="loading">
+                    Loading bus details...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Hidden Bus ID -->
+
+        <input
+            type="hidden"
+            id="busId"
+        >
+
+
+        <!-- =========================
+             PASSENGER DETAILS
+        ========================== -->
+
+        <section class="passenger-section">
+
+            <h2>👤 Passenger Details</h2>
+
+            <label for="passengerName">
+                Passenger Name
+            </label>
+
+            <input
+                type="text"
+                id="passengerName"
+                placeholder="Enter passenger name"
+                required
+            >
+
+
+            <label for="age">
+                Age
+            </label>
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Enter age"
+                min="1"
+                max="120"
+                required
+            >
+
+
+            <label for="gender">
+                Gender
+            </label>
+
+            <select id="gender" required>
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- =========================
+             SEAT SELECTION
+        ========================== -->
+
+        <section class="seat-section">
+
+            <h2>💺 Select Your Seat</h2>
+
+            <div id="seats">
+
+                <p class="loading">
+                    Loading seats...
+                </p>
+
+            </div>
+
+            <p class="selected-seat-text">
+
+                Selected Seat:
+
+                <b id="selectedSeat">
+                    None
+                </b>
+
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             BOOKING BUTTON
+        ========================== -->
+
+        <button
+            type="button"
+            class="confirm-book-btn"
+            onclick="bookTicket()"
+        >
+            🎟️ Confirm &amp; Book Ticket
+        </button>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Load the selected bus from localStorage
+            if (typeof loadSelectedBus === "function") {
+                loadSelectedBus();
+            }
+
+            // Display the logged-in user's email
+            if (typeof loadLoggedInEmail === "function") {
+                loadLoggedInEmail();
+            }
+
+            // Load booked and available seats
+            if (typeof loadSeats === "function") {
+                loadSeats();
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
